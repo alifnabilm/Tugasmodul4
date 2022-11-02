@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logo from "../logo.svg";
 import "./Counter.css";
+import { RootContext } from "../App";
 export default function Counter() {
   const [showImage, setShowImage] = useState(true);
   const [count, setCount] = useState(0);
@@ -21,7 +22,7 @@ export default function Counter() {
   return (
     <div className="Main">
       <p className="Text">Counter with useState</p>
-      <p>KELOMPOK XX</p>
+      <p>KELOMPOK 25</p>
       <div className="ViewImage">
         <div className="ViewImage1">
           <img
@@ -52,6 +53,35 @@ export default function Counter() {
 
       <p>{word}</p>
         <input onChange={(e) => getvalue(e)} />
+        <RootContext.Consumer>
+        {(value) => {
+          return (
+            <div
+              style={{
+                backgroundColor: "#59b",
+                borderRadius: 25,
+                paddingBottom: 1,
+                paddingLeft: 5,
+                paddingRight: 5,
+              }}
+            >
+              <h1>Tugas Use Context</h1>
+              {value.data.length === 0 ? (
+                <p>Data Not Set! Open Use Context Page first!</p>
+              ) : (
+                value.data.map((data, i) => {
+                  return (
+                   <div>
+                  <p>{data.nama}</p>
+                  <Link to={data.link}>Tugas NewHook</Link>
+                  </div>
+                  );
+                })
+              )}
+            </div>
+          );
+        }}
+      </RootContext.Consumer>
     </div>
   );
 }
