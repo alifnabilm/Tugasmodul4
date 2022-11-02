@@ -1,4 +1,5 @@
 import { RootContext } from "../App";
+import "./index.css";
 const dataContext = [
    {
     nama: "Shafiyah Huyai",
@@ -14,7 +15,7 @@ const dataContext = [
   },
   {
     nama: "M. Dzikrullah Farhan",
-    link: "",
+    link: "https://www.instagram.com/mdf_muzifar/",
   },
 ];
 export default function Index() {
