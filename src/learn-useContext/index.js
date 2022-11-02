@@ -1,3 +1,4 @@
+import { RootContext } from "../App";
 const dataContext = [
    {
     nama: "Shafiyah Huyai",
@@ -16,3 +17,12 @@ const dataContext = [
     link: "",
   },
 ];
+export default function Index() {
+  return (
+<RootContext.Consumer>
+        {(value) => {
+          value.isiData(dataContext);
+        }}
+      </RootContext.Consumer>
+  );
+}
