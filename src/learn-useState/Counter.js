@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import logo from "../logo.svg";
 import "./Counter.css";
 import { RootContext } from "../App";
+import { Link } from "react-router-dom";
 export default function Counter() {
   const [showImage, setShowImage] = useState(true);
   const [count, setCount] = useState(0);
