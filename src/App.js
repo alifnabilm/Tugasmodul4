@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
-
+import TugasHook from "./tugas-hook";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 import Counter from "./learn-useState/Counter";
@@ -26,6 +26,9 @@ function App() {
             <li className="li">
               <Link to="/context">Use Context</Link>
             </li>
+            <li className="li">
+              <Link to="/tugas-hook">Tugas Hook</Link>
+            </li>
           </ul>
         </nav>
     <ProviderContext
@@ -38,6 +41,7 @@ function App() {
           <Route path="/" exact element={<Counter />} />
           <Route path="/effect" exact element={<Effect />} />
           <Route path="/context" exact element={<Context />} />
+          <Route path="/tugas-hook" exact element={<TugasHook />} />
         </Routes>
       </ProviderContext>
       </div>
