@@ -73,7 +73,7 @@ export default function Counter() {
                   return (
                    <div>
                   <p>{data.nama}</p>
-                  <a href={data.link}>Tugas NewHook</a>
+                  <a href={data.link}>Use Context</a>
                   </div>
                   );
                 })
