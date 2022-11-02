@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 import Counter from "./learn-useState/Counter";
 import Effect from "./learn-useEffect";
+import Context from './learn-useContext';
 export const RootContext = React.createContext();
 
 function App() {
@@ -22,6 +23,9 @@ function App() {
             <li className="li">
               <Link to="/effect">Use Effect</Link>
             </li>
+            <li className="li">
+              <Link to="/context">Use Context</Link>
+            </li>
           </ul>
         </nav>
     <ProviderContext
@@ -33,6 +37,7 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Counter />} />
           <Route path="/effect" exact element={<Effect />} />
+          <Route path="/context" exact element={<Context />} />
         </Routes>
       </ProviderContext>
       </div>
